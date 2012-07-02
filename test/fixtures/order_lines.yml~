@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  po_header_id: MyString
+  integer: MyString
+  item_id: MyString
+  integer: MyString
+  vlrUnit: 1.5
+  qtd: 1.5
+  complemento: MyText
+
+two:
+  po_header_id: MyString
+  integer: MyString
+  item_id: MyString
+  integer: MyString
+  vlrUnit: 1.5
+  qtd: 1.5
+  complemento: MyText
