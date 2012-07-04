@@ -14,7 +14,7 @@
 
 <% @order_lines.each do |order_line| %>
   <tr>
-    <td width=50><%= order_line.po_header_id %></td>
+    <td width=50><%= order_line.order_header.order %></td>
     <td width=100><%= order_line.product.codigo %></td>
     <td width=100><%= order_line.vlrUnit %></td>
     <td width=15><%= order_line.qtd %></td>
