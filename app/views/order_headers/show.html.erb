@@ -1,12 +1,16 @@
+<fieldset style="width:35%">
+  <legend>Resumo da Ordem de Compra</legend>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Order:</b>
+  <b>Número da Ordem:</b>
   <%= @order_header.order %>
 </p>
 
 <p>
-  <b>Vendor:</b>
+  <b>Fornecedor:</b>
+  
   <%= @order_header.vendor_id %>
 </p>
 
@@ -14,7 +18,9 @@
   <b>Aviso:</b>
   <%= @order_header.aviso %>
 </p>
+</fieldset>
 
+<%= link_to 'Editar', edit_order_header_path(@order_header) %> |
+<%= link_to 'Voltar', order_headers_path %>
 
-<%= link_to 'Edit', edit_order_header_path(@order_header) %> |
-<%= link_to 'Back', order_headers_path %>
+<%= link_to 'Ir para as Linhas da OC', order_lines_path %>

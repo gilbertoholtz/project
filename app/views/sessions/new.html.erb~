@@ -1,2 +1,23 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<center><h1>Gerenciamento de Ordens de Compra</h1></center>
+
+
+   <fieldset style="width:25%">
+  	<legend>Login</legend>
+	<ol>
+	<%= form_tag sessions_path do %>
+	  
+<div class="field">
+	    <%= label_tag :username %>
+	    <%= text_field_tag :username, params[:username] %>
+	  </div>
+	  <div class="field">
+	    <%= label_tag :password %>
+	    <%= password_field_tag :password %>
+	  </div>
+	  <div class="actions"><%= submit_tag "Login" %></div>
+	<% end %>
+
+	</ol>
+
+   </fieldset>
+

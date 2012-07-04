@@ -1,11 +1,11 @@
-<h1>Listing vendors</h1>
+<h1>Cadastro de Fornecedor</h1>
 
-<table>
+<table style="border-style:solid; border-width:1">
   <tr>
-    <th>Cnpj</th>
-    <th>Fornecedor</th>
-    <th>Tipo</th>
-    <th>Telefone</th>
+    <th align='left'>Cnpj</th>
+    <th align='left'>Fornecedor</th>
+    <th align='left'>Tipo</th>
+    <th align='left'>Telefone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,17 +13,17 @@
 
 <% @vendors.each do |vendor| %>
   <tr>
-    <td><%= vendor.cnpj %></td>
-    <td><%= vendor.fornecedor %></td>
-    <td><%= vendor.tipo %></td>
-    <td><%= vendor.telefone %></td>
-    <td><%= link_to 'Show', vendor %></td>
-    <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
-    <td><%= link_to 'Destroy', vendor, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td width=150><%= vendor.cnpj %></td>
+    <td width=350><%= vendor.fornecedor %></td>
+    <td width=150><%= vendor.tipo %></td>
+    <td width=100><%= vendor.telefone %></td>
+    <td><%= link_to 'Exibir', vendor %></td>
+    <td><%= link_to 'Editar', edit_vendor_path(vendor) %></td>
+    <td><%= link_to 'Excluir', vendor, :confirm => 'Deseja excluir o registro selecionado?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Vendor', new_vendor_path %>
+<%= link_to 'Inserir fornecedor', new_vendor_path %>

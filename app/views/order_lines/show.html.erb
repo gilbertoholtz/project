@@ -1,3 +1,6 @@
+<fieldset style="width:35%">
+  <legend>Linhas da OC</legend>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,18 +9,8 @@
 </p>
 
 <p>
-  <b>Integer:</b>
-  <%= @order_line.integer %>
-</p>
-
-<p>
   <b>Item:</b>
   <%= @order_line.item_id %>
-</p>
-
-<p>
-  <b>Integer:</b>
-  <%= @order_line.integer %>
 </p>
 
 <p>
@@ -34,7 +27,7 @@
   <b>Complemento:</b>
   <%= @order_line.complemento %>
 </p>
+</fieldset>
 
-
-<%= link_to 'Edit', edit_order_line_path(@order_line) %> |
-<%= link_to 'Back', order_lines_path %>
+<%= link_to 'Editar', edit_order_line_path(@order_line) %> |
+<%= link_to 'Voltar', order_lines_path %>

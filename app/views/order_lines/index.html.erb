@@ -1,14 +1,12 @@
-<h1>Listing order_lines</h1>
+<h1>Linhas da Ordem de Compra</h1>
 
-<table>
+<table style="border-style:solid; border-width:1">
   <tr>
-    <th>Po header</th>
-    <th>Integer</th>
-    <th>Item</th>
-    <th>Integer</th>
-    <th>Vlrunit</th>
-    <th>Qtd</th>
-    <th>Complemento</th>
+    <th align='left'>Número da Ordem</th>
+    <th align='left'>Item</th>
+    <th align='left'>Valor unitário</th>
+    <th align='left'>Qtd</th>
+    <th align='left'>Complemento</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,20 +14,19 @@
 
 <% @order_lines.each do |order_line| %>
   <tr>
-    <td><%= order_line.po_header_id %></td>
-    <td><%= order_line.integer %></td>
-    <td><%= order_line.item_id %></td>
-    <td><%= order_line.integer %></td>
-    <td><%= order_line.vlrUnit %></td>
-    <td><%= order_line.qtd %></td>
-    <td><%= order_line.complemento %></td>
-    <td><%= link_to 'Show', order_line %></td>
-    <td><%= link_to 'Edit', edit_order_line_path(order_line) %></td>
-    <td><%= link_to 'Destroy', order_line, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td width=50><%= order_line.po_header_id %></td>
+    <td width=100><%= order_line.item_id %></td>
+    <td width=100><%= order_line.vlrUnit %></td>
+    <td width=15><%= order_line.qtd %></td>
+    <td width=250><%= order_line.complemento %></td>
+    <td><%= link_to 'Exibir', order_line %></td>
+    <td><%= link_to 'Editar', edit_order_line_path(order_line) %></td>
+    <td><%= link_to 'Deletar', order_line, :confirm => 'Você deseja deletar o registro selecionado?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Order line', new_order_line_path %>
+<%= link_to 'Criar nova linha de OC', new_order_line_path %>
+<%= link_to 'Voltar', order_headers_path %>

@@ -1,3 +1,5 @@
+<fieldset style="width:35%">
+  <legend>Dados do usuário</legend>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,7 +21,7 @@
   <b>Telefone:</b>
   <%= @vendor.telefone %>
 </p>
+</fieldset>
 
-
-<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
-<%= link_to 'Back', vendors_path %>
+<%= link_to 'Editar', edit_vendor_path(@vendor) %> |
+<%= link_to 'Voltar', vendors_path %>

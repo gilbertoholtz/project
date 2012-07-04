@@ -1,10 +1,10 @@
-<h1>Listing products</h1>
+<center><h1>Listagem de Produtos</h1>
 
-<table>
+<table style="border-style:solid; border-width:1">
   <tr>
-    <th>Codigo</th>
-    <th>Descricao</th>
-    <th>Udm</th>
+    <th align='left'>Código</th>
+    <th align='left'>Descrição</th>
+    <th align='left'>UDM</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
     <td><%= product.codigo %></td>
     <td><%= product.descricao %></td>
     <td><%= product.udm %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', product %></td>
+    <td><%= link_to 'Editar', edit_product_path(product) %></td>
+    <td><%= link_to 'Deletar', product, :confirm => 'Você deseja excluir o item selecionado?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Product', new_product_path %>
+</center>
+<%= link_to 'Inserir produto', new_product_path %>

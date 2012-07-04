@@ -1,12 +1,14 @@
+<fieldset style="width:35%">
+  <legend>Dados do usuário</legend>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
+  <b>Usuário:</b>
   <%= @user.username %>
 </p>
 
 <p>
-  <b>Password:</b>
+  <b>Senha:</b>
   <%= @user.password %>
 </p>
 
@@ -14,7 +16,7 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
+</fieldset>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Editar', edit_user_path(@user) %> |
+<%= link_to 'Voltar', users_path %>
