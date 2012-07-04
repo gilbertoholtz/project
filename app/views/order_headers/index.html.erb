@@ -13,7 +13,7 @@
 <% @order_headers.each do |order_header| %>
   <tr>
     <td width=150><%= order_header.order %></td>
-    <td width=150><%= order_header.vendor_id %></td>
+    <td width=150><%= order_header.vendor.fornecedor %></td>
     <td width=300><%= order_header.aviso %></td>
     <td><%= link_to 'Exibir', order_header %></td>
     <td><%= link_to 'Editar', edit_order_header_path(order_header) %></td>
