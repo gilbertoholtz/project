@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash#{name}" %>
+<% end %>
+<% if session[:user_id] %>
+  <%= link_to 'Logout', logout_path %>
+<% end %>
+
 <%= yield %>
 
 </body>
